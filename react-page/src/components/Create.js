@@ -24,20 +24,8 @@ function Create(props) {
         navigate('/');
     };
 
-    // assign tags_id
-//    const checkTag = () => {
-//        TagAPIData.map((data) => {
-//            if (tag === data.name) {
-//                setTag(data.id);
-//                console.log(tag);
-//                postData();
-//            }
-//        })
-//    };
-
     // POST request to API
     const postData = () => {
-        console.log(tag);
         axios.post(props.tasks_api_URL, {
             tag,
             title,

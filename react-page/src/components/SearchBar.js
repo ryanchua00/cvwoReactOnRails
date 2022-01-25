@@ -28,7 +28,7 @@ function SearchBar(props) {
             <select onChange={(e) => setTag(e.target.value)}>
                 <option value=""></option>
                 {TagAPIData.map((data) => {
-                        return <option value={data.name}>{data.name}</option>;
+                        return <option value={data.id}>{data.name}</option>;
                 })}
             </select>
             <Read searchTag={tag} searchTerm={query} tasks_api_URL={props.tasks_api_URL} tags_api_URL={props.tags_api_URL} />

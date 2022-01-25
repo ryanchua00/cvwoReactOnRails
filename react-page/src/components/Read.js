@@ -56,13 +56,12 @@ function Read(props) {
 
                 <Table.Body>
                     {TaskAPIData.filter((data) => {
-                            return TagAPIData.map((value) => {
-                                if (props.searchTag === "" || props.searchTag === null) {
+                                if (props.searchTag === "") {
                                     return data;
-                                } else if (value.name === props.searchTag && value.id === data.tags_id) {
+                                } else if (data.tag != null && data.tag.toString() === props.searchTag) {
                                     return data;
                                 }
-                            })
+
                         })
                         .filter((data) => {
                             {/* Filtering out based off searchTerm */}
